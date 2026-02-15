@@ -22,7 +22,8 @@ We further prioritize candidates with **lung vascular specificity** and **existi
 ## 📁 Project Structure
 
 ```
-your_project/
+3D-PPC-DTD/
+├── ipynb/ * The notbook version of the project is for reference only. Please see python code for details.
 ├── data/
 │   ├── raw/
 │   │   ├── GTEx_Analysis_2017-06-05_v8_RSEMv1.3.0_gene_tpm.gct.gz
