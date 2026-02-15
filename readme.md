@@ -202,6 +202,7 @@ numpy>=1.21.0
 scipy>=1.9.0
 matplotlib>=3.6.0
 gprofiler-official>=1.0.0
+```
 
 ```bash
 pip install -r requirements.txt
