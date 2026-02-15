@@ -21,8 +21,8 @@ We further prioritize candidates with **lung vascular specificity** and **existi
 
 ## 📁 Project Structure
 
+```
 your_project/
-├── ipynb/ * The notbook version of the project is for reference only. Please see python code for details.
 ├── data/
 │   ├── raw/
 │   │   ├── GTEx_Analysis_2017-06-05_v8_RSEMv1.3.0_gene_tpm.gct.gz
@@ -101,6 +101,7 @@ your_project/
     └── step9_outputs/
         ├── pah_drug_comparison.csv
         └── repurposing_opportunities.txt
+```
 
 
 > ✅ All outputs are **plain-text or CSV** — no HTML, no databases. Fully reproducible and publication-ready.
@@ -157,8 +158,9 @@ Then run preprocessing:
 ```bash
 python src/prep_data.py
 
-Run Full Analysis
-bash
+## Run Full Analysis
+
+```bash
 python src/step1.py
 python src/step2.py
 python src/step3.py
@@ -171,31 +173,30 @@ python src/step9.py
 
 ⏱️ Total runtime: ~15–30 minutes on a standard laptop.
 
-📊 Key Outputs to Explore
+## 📊 Key Outputs to Explore
 
 After completion, inspect these files:
 
-results/step6_outputs/prioritized_pah_candidates.csv  
+- **`results/step6_outputs/prioritized_pah_candidates.csv`**  
   → Ranked list of drug–target pairs with composite scores.
 
-results/step7_outputs/pah_target_summary.txt  
+- **`results/step7_outputs/pah_target_summary.txt`**  
   → Human-readable top-5 summary with therapeutic rationale.
 
-results/step9_outputs/repurposing_opportunities.txt  
+- **`results/step9_outputs/repurposing_opportunities.txt`**  
   → High-potential "old drug, new use" candidates (e.g., kinase inhibitors, antifibrotics).
 
-results/step8_outputs/enrichment_summary.txt  
-  → Reveals enriched pathways (e.g.,vascular smooth muscle contraction,response to hypoxia).
+- **`results/step8_outputs/enrichment_summary.txt`**  
+  → Reveals enriched pathways (e.g., *vascular smooth muscle contraction*, *response to hypoxia*).
 
-📦 Dependencies (requirements.txt)
+## 📦 Dependencies (`requirements.txt`)
 
-txt
+```txt
 pandas>=1.5.0
 numpy>=1.21.0
 scipy>=1.9.0
 matplotlib>=3.6.0
 gprofiler-official>=1.0.0
 
-Install with:
-bash
+```bash
 pip install -r requirements.txt
