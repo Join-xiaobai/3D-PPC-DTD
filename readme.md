@@ -137,10 +137,12 @@ We further prioritize candidates with **lung vascular specificity** and **existi
 - Internet access (required only for Step 8: g:Profiler API)
 
 ### Installation
+
 ```bash
 git clone https://github.com/yourname/pah-point-cloud.git
 cd pah-point-cloud
 pip install -r requirements.txt
+```
 
 ## Prepare Data
 
@@ -158,6 +160,7 @@ Manually download the following public datasets and place them in `data/raw/`:
 Then run preprocessing:
 ```bash
 python src/prep_data.py
+```
 
 ## Run Full Analysis
 
@@ -171,6 +174,7 @@ python src/step6.py
 python src/step7.py
 python src/step8.py   # requires internet
 python src/step9.py
+```
 
 ⏱️ Total runtime: ~15–30 minutes on a standard laptop.
 
@@ -201,3 +205,4 @@ gprofiler-official>=1.0.0
 
 ```bash
 pip install -r requirements.txt
+```
