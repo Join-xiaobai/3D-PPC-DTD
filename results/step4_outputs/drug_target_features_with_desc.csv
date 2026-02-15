@@ -1,0 +1,3 @@
+target_chembl_id,gene_symbol,compound_chembl_id,compound_name,standard_value,standard_type,is_approved_drug,pv_log2fc,is_heart_core,canonical_smiles,mol_weight,logp,tpsa,hbd,hba,num_rota,qed_weighted
+CHEMBL4403,RYR2,CHEMBL2104951,ALADORIAN,15.0,EC50,False,5.5573554,1,COc1ccc2c(c1)CN(C(=O)C(=O)O)CCS2,267.31,1.21,66.84,1,4,1,0.77
+CHEMBL1293193,NPPA,CHEMBL42583,SAMPATRILAT,3.4,IC50,False,0.0,1,CS(=O)(=O)N[C@@H](CCCCN)C(=O)NC[C@H](CC1(C(=O)N[C@@H](Cc2ccc(O)cc2)C(=O)O)CCCC1)C(=O)O,584.69,0.32,225.22,7,8,17,0.12

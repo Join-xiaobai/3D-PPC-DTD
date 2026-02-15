@@ -1,0 +1,79 @@
+your_project/
+├── data/
+│   ├── raw/
+│   │   ├── GTEx_Analysis_2017-06-05_v8_RSEMv1.3.0_gene_tpm.gct.gz
+│   │   ├── GTEx_Analysis_2017-06-05_v8_Annotations_SampleAttributesDS.txt
+│   │   ├── chembl_36_activities.csv.gz
+│   │   ├── chembl_36_molecule_dictionary.csv.gz
+│   │   ├── chembl_36_target_dictionary.csv.gz
+│   │   ├── chembl_36_target_components.csv.gz
+│   │   ├── uniprot_human.tsv.gz
+│   │   ├── GSE117261_series_matrix.txt.gz
+│   │   ├── GSE240921_series_matrix.txt.gz
+│   │   └── GSE210248_series_matrix.txt.gz
+│   │
+│   └── processed/
+│       ├── gtex_lung_heart_tpm.csv
+│       ├── GSE117261_series_matrix.txt
+│       ├── GSE240921_series_matrix.txt
+│       ├── GSE210248_series_matrix.txt
+│       ├── chembl_drug_target_pairs.csv
+│       └── uniprot_human_mapping.csv
+│
+├── src/
+│   ├── prep_data.py
+│   ├── step1.py
+│   ├── step2.py
+│   ├── step3.py
+│   ├── step4.py
+│   ├── step5.py
+│   ├── step6.py
+│   ├── step7.py
+│   ├── step8.py
+│   └── step9.py
+│
+└── results/
+    ├── step1_outputs/
+    │   ├── differential_genes.csv
+    │   ├── lung_enriched_genes.csv
+    │   ├── heart_enriched_genes.csv
+    │   ├── top20_lung_enriched.csv
+    │   ├── top20_heart_enriched.csv
+    │   └── lung_vs_heart_scatter.png
+    │
+    ├── step2_outputs/
+    │   ├── pah_lung_deg.csv
+    │   ├── upregulated_in_pah.csv
+    │   ├── downregulated_in_pah.csv
+    │   └── pah_volcano_plot.png
+    │
+    ├── step3_outputs/
+    │   ├── rv_cardiomyocyte_deg.csv
+    │   ├── up_in_pah_rv.csv
+    │   ├── down_in_pah_rv.csv
+    │   └── rv_cardiomyocyte_deg_plot.png
+    │
+    ├── step4_outputs/
+    │   ├── lung_vascular_specificity_scores.csv
+    │   ├── top100_lung_vascular_enriched.csv
+    │   └── vascular_specificity_distribution.png
+    │
+    ├── step5_outputs/
+    │   └── candidate_drug_target_contexts.csv
+    │
+    ├── step6_outputs/
+    │   ├── prioritized_pah_candidates.csv
+    │   └── top50_pah_candidates.csv
+    │
+    ├── step7_outputs/
+    │   ├── final_pah_candidate_list.csv
+    │   └── pah_target_summary.txt
+    │
+    ├── step8_outputs/
+    │   ├── top100_pah_targets.txt
+    │   ├── enrichment_results.csv
+    │   └── enrichment_summary.txt
+    │
+    └── step9_outputs/
+        ├── pah_drug_comparison.csv
+        └── repurposing_opportunities.txt

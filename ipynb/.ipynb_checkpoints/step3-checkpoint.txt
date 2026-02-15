@@ -1,0 +1,59 @@
+目标：从之前鉴定出的核心功能基因中，筛选出具有药物开发潜力的“可药靶点”（Druggable Targets），并找出已知能作用于这些靶点的化合物（尤其是FDA批准的药物）。
+
+整个流程可以分为三个清晰的阶段：
+
+第一阶段：准备高优先级靶点候选列表
+
+输入：来自 Step1 的核心功能基因列表（lung_core_function_genes.csv 和 heart_core_function_genes.csv）。
+操作：直接将这些经过验证的、在肺或心脏中特异表达/失调的基因作为高优先级的药物靶点候选。
+产出：
+    lung_high_priority_targets.csv (16个基因)
+    heart_high_priority_targets.csv (19个基因)
+
+关键点：这一步确认了后续分析的起点是高质量、有生物学意义的基因。
+
+第二阶段：构建 ChEMBL 靶点到基因符号的映射
+
+ChEMBL -> UniProt：
+    从本地 ChEMBL SQLite 数据库 (chembl_36.db) 中提取所有人类单蛋白靶点 (SINGLE PROTEIN) 及其对应的 UniProt Accession。
+    产出：target_to_uniprot.csv
+
+UniProt -> Gene Symbol：
+    解析官方 UniProt 人类蛋白数据文件 (UP000005640_9606.dat)，从中提取每个蛋白条目的 标准人类基因符号 (Gene Symbol)。
+    产出：gene_map.csv
+
+合并映射：
+    将上述两个映射表连接起来，最终得到 ChEMBL ID -> Gene Symbol 的完整映射表。
+    产出：chembl_target_id_to_gene.csv (包含 5,260 个有效映射)
+
+关键点：这个链条 (ChEMBL -> UniProt -> Gene Symbol) 是药物信息学中的标准预处理步骤，为后续筛选奠定了基础。
+
+第三阶段：筛选可药靶点并查询已知化合物
+
+筛选可药靶点：
+    将第一阶段的高优先级靶点列表（肺和心脏）与第二阶段的 ChEMBL -> Gene Symbol 映射表进行交集。
+    结果：
+        肺：16个候选基因中，2个 在 ChEMBL 中有记录。
+        心脏：19个候选基因中，6个 在 ChEMBL 中有记录。
+    这8个基因就是最终的 “可药靶点”，因为它们既有明确的生物学功能（来自Step1/2），又有已知的配体/化合物（来自ChEMBL）。
+
+查询活性化合物：
+    使用 chembl_webresource_client 库，通过 API 查询这8个 ChEMBL 靶点。
+    筛选条件：活性值 (IC50/Ki/EC50) ≤ 1000 nM (即 ≤ 1 μM)，这是一个常用的高活性阈值。
+    结果：
+        共找到 2个 活性化合物。
+        0个 是 FDA 批准的药物 (max_phase == 4)。
+
+关键洞察与解读：
+    虽然没有找到已上市药物，但这完全正常且有价值。新靶点通常不会有现成的上市药。
+    Notebook 提供了对这两个化合物的深度解读：
+        Aladorian (靶向 RYR2)：一种实验性的 RYR2 调节剂，用于稳定心肌细胞钙通道，在心律失常研究中有应用。是很好的工具分子或先导化合物。
+        Sampatrilat (靶向 NPPA)：一种曾进入临床II期的双重 NEP/ACE 抑制剂，用于治疗心衰。虽然未最终上市，但已有人体安全性数据，是进行 **“老药新用” **(Drug Repurposing) 的绝佳候选！
+
+总结
+
+step3.ipynb 成功完成了从生物学发现到药物发现的关键转化：
+
+精准定位：从数百个差异基因中，聚焦到 8个 具备可药性的高价值靶点（2个肺，6个心脏）。
+发现先导化合物：找到了 2个 高活性化合物，它们并非随机小分子，而是具有明确作用机制和研究背景的分子。
+提供明确方向：特别是 Sampatrilat，作为一个有临床数据的候选药物，为针对心脏靶点 NPPA 的 “老药新用” 策略提供了极具吸引力的切入点。

@@ -1,0 +1,17 @@
+{
+  "final_val_loss": 0.017473783809691668,
+  "pv": {
+    "spearman": 0.817568645697137,
+    "pearson": 0.9960529804229736,
+    "mae": 0.07856278866529465,
+    "r2": 0.9918220043182373
+  },
+  "rv": {
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0
+  },
+  "num_train_samples": 1337,
+  "num_val_samples": 236,
+  "model_architecture": "TNNI3-FAPPC-DTD (RV as binary classification)"
+}

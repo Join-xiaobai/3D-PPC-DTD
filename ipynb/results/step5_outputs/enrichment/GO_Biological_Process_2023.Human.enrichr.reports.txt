@@ -1,0 +1,22 @@
+Gene_set	Term	Overlap	P-value	Adjusted P-value	Old P-value	Old Adjusted P-value	Odds Ratio	Combined Score	Genes
+GO_Biological_Process_2023	Heart Process (GO:0003015)	1/16	7.999806e-04	3.674929e-03	0	0	1.998400e+04	1.425044e+05	TNNI3
+GO_Biological_Process_2023	Negative Regulation Of ATP-dependent Activity (GO:0032780)	1/16	7.999806e-04	3.674929e-03	0	0	1.998400e+04	1.425044e+05	TNNI3
+GO_Biological_Process_2023	Skeletal Muscle Contraction (GO:0003009)	1/19	9.499781e-04	3.674929e-03	0	0	1.998100e+04	1.390492e+05	TNNI3
+GO_Biological_Process_2023	Regulation Of Cardiac Muscle Contraction By Calcium Ion Signaling (GO:0010882)	1/20	9.999772e-04	3.674929e-03	0	0	1.998000e+04	1.380174e+05	TNNI3
+GO_Biological_Process_2023	Ventricular Cardiac Muscle Tissue Development (GO:0003229)	1/25	1.249973e-03	3.674929e-03	0	0	1.997500e+04	1.335255e+05	TNNI3
+GO_Biological_Process_2023	Cardiac Muscle Tissue Morphogenesis (GO:0055008)	1/31	1.549969e-03	3.674929e-03	0	0	1.996900e+04	1.291899e+05	TNNI3
+GO_Biological_Process_2023	Vasculogenesis (GO:0001570)	1/33	1.649968e-03	3.674929e-03	0	0	1.996700e+04	1.279286e+05	TNNI3
+GO_Biological_Process_2023	Ventricular Cardiac Muscle Tissue Morphogenesis (GO:0055010)	1/33	1.649968e-03	3.674929e-03	0	0	1.996700e+04	1.279286e+05	TNNI3
+GO_Biological_Process_2023	Cardiac Muscle Contraction (GO:0060048)	1/33	1.649968e-03	3.674929e-03	0	0	1.996700e+04	1.279286e+05	TNNI3
+GO_Biological_Process_2023	Regulation Of Cardiac Muscle Contraction (GO:0055117)	1/35	1.749966e-03	3.674929e-03	0	0	1.996500e+04	1.267410e+05	TNNI3
+GO_Biological_Process_2023	Heart Contraction (GO:0060047)	1/41	2.049963e-03	3.674933e-03	0	0	1.995900e+04	1.235449e+05	TNNI3
+GO_Biological_Process_2023	Cardiac Ventricle Morphogenesis (GO:0003208)	1/42	2.099962e-03	3.674933e-03	0	0	1.995800e+04	1.230578e+05	TNNI3
+GO_Biological_Process_2023	Blood Circulation (GO:0008015)	1/50	2.499957e-03	3.974933e-03	0	0	1.995000e+04	1.195301e+05	TNNI3
+GO_Biological_Process_2023	Blood Vessel Morphogenesis (GO:0048514)	1/53	2.649956e-03	3.974933e-03	0	0	1.994700e+04	1.183498e+05	TNNI3
+GO_Biological_Process_2023	Striated Muscle Contraction (GO:0006941)	1/57	2.849953e-03	3.989935e-03	0	0	1.994300e+04	1.168750e+05	TNNI3
+GO_Biological_Process_2023	Calcium-Mediated Signaling (GO:0019722)	1/85	4.249940e-03	5.578046e-03	0	0	1.991500e+04	1.087528e+05	TNNI3
+GO_Biological_Process_2023	Calcium Ion Homeostasis (GO:0055074)	1/102	5.099932e-03	6.299916e-03	0	0	1.989800e+04	1.050322e+05	TNNI3
+GO_Biological_Process_2023	Circulatory System Development (GO:0072359)	1/132	6.599921e-03	7.681489e-03	0	0	1.986800e+04	9.975122e+04	TNNI3
+GO_Biological_Process_2023	Intracellular Calcium Ion Homeostasis (GO:0006874)	1/139	6.949918e-03	7.681489e-03	0	0	1.986100e+04	9.868981e+04	TNNI3
+GO_Biological_Process_2023	Heart Development (GO:0007507)	1/171	8.549908e-03	8.977403e-03	0	0	1.982900e+04	9.442242e+04	TNNI3
+GO_Biological_Process_2023	Intracellular Monoatomic Cation Homeostasis (GO:0030003)	1/190	9.499902e-03	9.499902e-03	0	0	1.981000e+04	9.224475e+04	TNNI3

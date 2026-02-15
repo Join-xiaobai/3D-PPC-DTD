@@ -1,0 +1,90 @@
+2026-02-15 14:42:25,034 - WARNING - ⚠️ DeepPurpose 未安装，将跳过该基线
+2026-02-15 14:42:25,035 - WARNING - ⚠️ HuggingFace transformers/torch 未安装，MolTrans 将使用 MLP 代理
+2026-02-15 14:42:25,039 - INFO - 🚀 开始第八阶段：模型对比实验（优化版）
+2026-02-15 14:42:25,039 - INFO - 配置参数: {'cv_folds': 5, 'random_state': 42, 'output_dir': 'results/step8_outputs', 'imputer_strategy': 'mean', 'models': {'Linear Regression (Ridge)': {'alpha': 1.0, 'random_state': 42}, 'Random Forest': {'n_estimators': 200, 'max_depth': None, 'n_jobs': -1, 'random_state': 42}, 'XGBoost': {'n_estimators': 200, 'learning_rate': 0.1, 'n_jobs': -1, 'random_state': 42}, 'LightGBM': {'n_estimators': 200, 'learning_rate': 0.1, 'n_jobs': -1, 'random_state': 42}, 'SVM': {'kernel': 'rbf', 'gamma': 'scale', 'random_state': 42}, 'MLP': {'hidden_layer_sizes': (256, 128), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}, 'GIN Proxy (Morgan)': {'hidden_layer_sizes': (512, 256), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}, 'MolTrans (MLP Proxy)': {'hidden_layer_sizes': (1024, 512), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}}, 'deeppurpose': {'epochs': 30, 'batch_size': 32, 'model': 'DeepDTA'}}
+2026-02-15 14:42:25,040 - INFO - [1/6] 加载Step6预测数据
+2026-02-15 14:42:25,118 - INFO - ✅ 成功加载 1573 个TNNI3配体样本
+2026-02-15 14:42:25,119 - INFO - [2/6] 构建1D特征向量
+2026-02-15 14:42:25,124 - INFO - ✅ 特征维度: (1573, 103)
+2026-02-15 14:42:25,125 - INFO - [3/6] 生成Morgan指纹（替代GIN输入）
+2026-02-15 14:42:31,189 - INFO - ✅ 指纹生成完成 (6.1s)
+2026-02-15 14:42:31,192 - INFO - ✅ PV标签范围: [-1.806, 5.557]
+2026-02-15 14:42:31,193 - INFO - ✅ RV正样本比例: 5.1%
+2026-02-15 14:42:31,193 - INFO - [4/6] 初始化5折分层交叉验证
+2026-02-15 14:42:31,194 - INFO - [5/6] 执行5折交叉验证
+2026-02-15 14:42:31,197 - INFO - 📌 开始第 1/5 折训练
+2026-02-15 14:45:54,298 - WARNING - ⚠️ DeepPurpose 未安装，将跳过该基线
+2026-02-15 14:46:01,419 - INFO - ✅ HuggingFace transformers 导入成功
+2026-02-15 14:46:01,423 - INFO - 🚀 开始第八阶段：模型对比实验（优化版）
+2026-02-15 14:46:01,424 - INFO - 配置参数: {'cv_folds': 5, 'random_state': 42, 'output_dir': 'results/step8_outputs', 'imputer_strategy': 'mean', 'models': {'Linear Regression (Ridge)': {'alpha': 1.0, 'random_state': 42}, 'Random Forest': {'n_estimators': 200, 'max_depth': None, 'n_jobs': -1, 'random_state': 42}, 'XGBoost': {'n_estimators': 200, 'learning_rate': 0.1, 'n_jobs': -1, 'random_state': 42}, 'LightGBM': {'n_estimators': 200, 'learning_rate': 0.1, 'n_jobs': -1, 'random_state': 42}, 'SVM': {'kernel': 'rbf', 'gamma': 'scale', 'random_state': 42}, 'MLP': {'hidden_layer_sizes': (256, 128), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}, 'GIN Proxy (Morgan)': {'hidden_layer_sizes': (512, 256), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}, 'MolTrans (MLP Proxy)': {'hidden_layer_sizes': (1024, 512), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}}, 'deeppurpose': {'epochs': 30, 'batch_size': 32, 'model': 'DeepDTA'}}
+2026-02-15 14:46:01,424 - INFO - [1/6] 加载Step6预测数据
+2026-02-15 14:46:01,522 - INFO - ✅ 成功加载 1573 个TNNI3配体样本
+2026-02-15 14:46:01,523 - INFO - [2/6] 构建1D特征向量
+2026-02-15 14:46:01,529 - INFO - ✅ 特征维度: (1573, 103)
+2026-02-15 14:46:01,529 - INFO - [3/6] 从缓存加载Morgan指纹
+2026-02-15 14:46:01,596 - INFO - ✅ PV标签范围: [-1.806, 5.557]
+2026-02-15 14:46:01,597 - INFO - ✅ RV正样本比例: 5.1%
+2026-02-15 14:46:01,597 - INFO - [4/6] 初始化5折分层交叉验证
+2026-02-15 14:46:01,598 - INFO - [5/6] 执行5折交叉验证
+2026-02-15 14:46:01,600 - INFO - 📌 开始第 1/5 折训练
+2026-02-15 14:46:16,023 - ERROR - 模型训练失败: SVR, 错误: SVR.__init__() got an unexpected keyword argument 'random_state'
+2026-02-15 14:46:16,024 - ERROR - 模型训练失败: SVR, 错误: SVR.__init__() got an unexpected keyword argument 'random_state'
+2026-02-15 14:47:48,394 - INFO - ✅ 第1折完成 (106.8s)
+2026-02-15 14:47:48,396 - INFO - 📌 开始第 2/5 折训练
+2026-02-15 14:48:02,620 - ERROR - 模型训练失败: SVR, 错误: SVR.__init__() got an unexpected keyword argument 'random_state'
+2026-02-15 14:48:02,620 - ERROR - 模型训练失败: SVR, 错误: SVR.__init__() got an unexpected keyword argument 'random_state'
+2026-02-15 14:53:20,698 - WARNING - ⚠️ DeepPurpose 未安装，将跳过该基线
+2026-02-15 14:53:27,218 - INFO - ✅ HuggingFace transformers 导入成功
+2026-02-15 14:53:27,222 - INFO - 🚀 开始第八阶段：模型对比实验（最终稳定版）
+2026-02-15 14:53:27,223 - INFO - 配置参数: {'cv_folds': 5, 'random_state': 42, 'output_dir': 'results/step8_outputs', 'imputer_strategy': 'mean', 'models': {'Linear Regression (Ridge)': {'alpha': 1.0, 'random_state': 42}, 'Random Forest': {'n_estimators': 200, 'max_depth': None, 'n_jobs': -1, 'random_state': 42}, 'XGBoost': {'n_estimators': 200, 'learning_rate': 0.1, 'n_jobs': -1, 'random_state': 42}, 'LightGBM': {'n_estimators': 100, 'learning_rate': 0.05, 'num_leaves': 15, 'min_data_in_leaf': 5, 'max_depth': 5, 'verbosity': -1, 'random_state': 42}, 'SVM': {'kernel': 'rbf', 'gamma': 'scale', 'random_state': 42}, 'MLP': {'hidden_layer_sizes': (256, 128), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}, 'GIN Proxy (Morgan)': {'hidden_layer_sizes': (512, 256), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}, 'MolTrans (MLP Proxy)': {'hidden_layer_sizes': (1024, 512), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}}, 'deeppurpose': {'epochs': 30, 'batch_size': 32, 'model': 'DeepDTA'}}
+2026-02-15 14:53:27,223 - INFO - [1/6] 加载Step6预测数据
+2026-02-15 14:53:27,320 - INFO - ✅ 成功加载 1573 个TNNI3配体样本
+2026-02-15 14:53:27,321 - INFO - [2/6] 构建1D特征向量
+2026-02-15 14:53:27,326 - INFO - ✅ 特征维度: (1573, 103)
+2026-02-15 14:53:27,326 - INFO - [3/6] 从缓存加载Morgan指纹
+2026-02-15 14:53:27,431 - INFO - ✅ PV标签范围: [-1.806, 5.557]
+2026-02-15 14:53:27,432 - INFO - ✅ RV正样本比例: 5.1%
+2026-02-15 14:53:27,432 - INFO - [4/6] 初始化5折分层交叉验证
+2026-02-15 14:53:27,433 - INFO - [5/6] 执行5折交叉验证
+2026-02-15 14:53:27,435 - INFO - 📌 开始第 1/5 折训练
+2026-02-15 14:53:39,389 - ERROR - 模型训练失败: SVR, 错误: SVR.__init__() got an unexpected keyword argument 'random_state'
+2026-02-15 14:53:39,390 - ERROR - 模型训练失败: SVR, 错误: SVR.__init__() got an unexpected keyword argument 'random_state'
+2026-02-15 14:57:41,935 - WARNING - ⚠️ DeepPurpose 未安装，将跳过该基线
+2026-02-15 14:57:44,972 - INFO - ✅ HuggingFace transformers 导入成功
+2026-02-15 14:57:44,976 - INFO - 🚀 开始第八阶段：模型对比实验（最终稳定版）
+2026-02-15 14:57:44,976 - INFO - 配置参数: {'cv_folds': 5, 'random_state': 42, 'output_dir': 'results/step8_outputs', 'imputer_strategy': 'mean', 'models': {'Linear Regression (Ridge)': {'alpha': 1.0, 'random_state': 42}, 'Random Forest': {'n_estimators': 200, 'max_depth': None, 'n_jobs': -1, 'random_state': 42}, 'XGBoost': {'n_estimators': 200, 'learning_rate': 0.1, 'n_jobs': -1, 'random_state': 42}, 'LightGBM': {'n_estimators': 100, 'learning_rate': 0.05, 'num_leaves': 15, 'min_data_in_leaf': 5, 'max_depth': 5, 'verbosity': -1, 'random_state': 42}, 'SVM': {'kernel': 'rbf', 'gamma': 'scale'}, 'MLP': {'hidden_layer_sizes': (256, 128), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}, 'GIN Proxy (Morgan)': {'hidden_layer_sizes': (512, 256), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}, 'MolTrans (MLP Proxy)': {'hidden_layer_sizes': (1024, 512), 'max_iter': 500, 'early_stopping': True, 'random_state': 42}}, 'deeppurpose': {'epochs': 30, 'batch_size': 32, 'model': 'DeepDTA'}}
+2026-02-15 14:57:44,977 - INFO - [1/6] 加载Step6预测数据
+2026-02-15 14:57:45,020 - INFO - ✅ 成功加载 1573 个TNNI3配体样本
+2026-02-15 14:57:45,021 - INFO - [2/6] 构建1D特征向量
+2026-02-15 14:57:45,026 - INFO - ✅ 特征维度: (1573, 103)
+2026-02-15 14:57:45,026 - INFO - [3/6] 从缓存加载Morgan指纹
+2026-02-15 14:57:45,040 - INFO - ✅ PV标签范围: [-1.806, 5.557]
+2026-02-15 14:57:45,041 - INFO - ✅ RV正样本比例: 5.1%
+2026-02-15 14:57:45,041 - INFO - [4/6] 初始化5折分层交叉验证
+2026-02-15 14:57:45,041 - INFO - [5/6] 执行5折交叉验证
+2026-02-15 14:57:45,043 - INFO - 📌 开始第 1/5 折训练
+2026-02-15 15:02:44,452 - INFO - ✅ 第1折完成 (299.4s)
+2026-02-15 15:02:44,455 - INFO - 📌 开始第 2/5 折训练
+2026-02-15 15:05:54,762 - INFO - ✅ 第2折完成 (190.3s)
+2026-02-15 15:05:54,768 - INFO - 📌 开始第 3/5 折训练
+2026-02-15 15:10:53,756 - INFO - ✅ 第3折完成 (299.0s)
+2026-02-15 15:10:53,852 - INFO - 📌 开始第 4/5 折训练
+2026-02-15 15:15:21,457 - INFO - ✅ 第4折完成 (267.6s)
+2026-02-15 15:15:21,459 - INFO - 📌 开始第 5/5 折训练
+2026-02-15 15:21:15,465 - INFO - ✅ 第5折完成 (354.0s)
+2026-02-15 15:21:15,466 - INFO - [6/6] 计算评估指标
+2026-02-15 15:21:15,772 - INFO - 
+📊 5折CV对比结果（最终稳定版）:
+2026-02-15 15:21:15,777 - INFO -                     Model PV_Spearman (mean±std) PV_Pearson PV_MAE PV_RMSE  PV_R2 RV_AUC (mean±std) RV_F1 RV_Accuracy RV_Precision RV_Recall
+Linear Regression (Ridge)            0.849±0.021     -0.080  2.350   3.320 -1.160       1.000±0.000 0.107       0.414        0.107     0.107
+            Random Forest            0.996±0.004     -0.079  2.348   3.317 -1.157       1.000±0.000 0.074       0.905        0.074     0.074
+                  XGBoost            0.977±0.018     -0.079  2.347   3.319 -1.158       1.000±0.000 0.098       0.051        0.098     0.098
+                 LightGBM            0.982±0.013     -0.086  2.355   3.318 -1.158       1.000±0.000 0.098       0.051        0.098     0.098
+                      SVM            0.620±0.062     -0.026  1.586   2.586 -0.311       0.999±0.003 0.098       0.051        0.098     0.098
+                      MLP            0.841±0.021     -0.082  2.396   3.302 -1.137       0.999±0.002 0.105       0.417        0.105     0.105
+       GIN Proxy (Morgan)            0.844±0.019     -0.080  2.395   3.316 -1.155       1.000±0.000 0.105       0.490        0.105     0.105
+     MolTrans (MLP Proxy)            0.842±0.017     -0.082  2.388   3.303 -1.138       1.000±0.000 0.093       0.514        0.093     0.093
+   TNNI3-FAPPC-DTD (Ours)            0.849±0.000      0.999  0.068   0.135  0.996       1.000±0.000 1.000       1.000        1.000     1.000
+2026-02-15 15:21:15,779 - INFO - 
+✅ 结果已保存至: results/step8_outputs/comparison_cv_metrics_optimized.csv
+2026-02-15 15:21:15,779 - INFO - 🎉 实验完成！

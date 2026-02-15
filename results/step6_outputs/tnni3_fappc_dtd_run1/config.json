@@ -1,0 +1,20 @@
+{
+  "data_path": "results/step5_outputs/drug_target_pairs_final_features.csv",
+  "output_dir": "results/step6_outputs/tnni3_fappc_dtd_run1",
+  "chem_dim": 64,
+  "func_dim": 32,
+  "physchem_dim": 7,
+  "aux_dim": 5,
+  "shared_hidden": 128,
+  "head_hidden": 64,
+  "dropout": 0.3,
+  "batch_size": 64,
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "epochs": 100,
+  "patience": 15,
+  "val_ratio": 0.15,
+  "seed": 42,
+  "alpha": 0.7,
+  "beta": 0.3
+}
